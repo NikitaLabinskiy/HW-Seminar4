@@ -16,12 +16,7 @@ int NaturalDegreeOfNumber(int number1, int number2)
 {
     int size = 0;
     int number = number1;
-    while(number2 > 1)
-    {
-        number2--;
-        size++;
-    }
-    for(int i = 0; i < size; i++)
+    for(int i = 1; i < number2; i++)
     {
         number1 *= number;
     }
