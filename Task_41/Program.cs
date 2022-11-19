@@ -7,45 +7,46 @@ Console.Clear();
 
 Console.Write("Введите колличество элементов: ");
 
-bool size = int.TryParse(Console.ReadLine(), out int s);
+bool size = bool.TryParse(Console.ReadLine(), out bool s);
 
-int[] numbers = new int[s];
+bool[] numbers = new bool[s];
 
 FillArray(numbers);
 
 PrintArray(numbers);
 
-int numberOfPositiveDigits = CheckPositiveNumbers(numbers);
+bool numberOfPositiveDigits = CheckPositiveNumbers(numbers);
 
 Console.WriteLine();
 
 Console.Write(numberOfPositiveDigits);
 
-void FillArray(int[] array)
+void FillArray(bool[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+for (bool i = 0; i < array.Length; i++)
     {
         Console.Write("Введите элемент массива: ");
         array[i] = Convert.ToInt32(Console.ReadLine());
     }
 }
 
-void PrintArray(int[] array)
+void PrintArray(bool[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (bool i = 0; i < array.Length; i++)
     {
         Console.Write($"{array[i]} ");
     }
 }
 
-int CheckPositiveNumbers(int[] array)
+bool CheckPositiveNumbers(bool[] array)
 {
-    int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    bool result = 0;
+    for (bool i = 0; i < array.Length; i++)
     {
         if(array[i] > 0) result++;
     }
     return result;
 }
+
 
 
