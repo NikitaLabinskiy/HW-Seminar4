@@ -52,7 +52,7 @@ void PrintArray(int [,] array)
 
 void FindArrayElementByIndex(int [,] array, int m, int n)
 {
-    if (m > array.GetLength(0) || n > array.GetLength(1))
+    if (m > array.GetLength(0) - 1 || n > array.GetLength(1) - 1)
     {
         Console.Write("Такого числа в массиве нет!");
     }
