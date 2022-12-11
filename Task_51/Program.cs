@@ -16,7 +16,7 @@ bool isParsedM = int.TryParse(Console.ReadLine(), out int m);
 Console.Write("Введите индекс столбца: ");
 bool isParsedN = int.TryParse(Console.ReadLine(), out int n);
 
-int [,] array = new int[5, 5];
+int[,] array = new int[5, 5];
 
 FillArray(array);
 
@@ -26,31 +26,31 @@ Console.WriteLine();
 
 FindArrayElementByIndex(array, m, n);
 
-void FillArray(int [,] array)
+void FillArray(int[,] array)
 {
     Random random = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = random.Next(10, 21); 
+            array[i, j] = random.Next(10, 21);
         }
     }
 }
 
-void PrintArray(int [,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i,j]} ");
+            Console.Write($"{array[i, j]} ");
         }
         Console.WriteLine();
     }
 }
 
-void FindArrayElementByIndex(int [,] array, int m, int n)
+void FindArrayElementByIndex(int[,] array, int m, int n)
 {
     if (m > array.GetLength(0) - 1 || n > array.GetLength(1) - 1)
     {
@@ -60,7 +60,7 @@ void FindArrayElementByIndex(int [,] array, int m, int n)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-             if ( i == m && j == n){Console.WriteLine($"Значение элемнта: {array[i, j]} ");}
+            if (i == m && j == n) { Console.WriteLine($"Значение элемнта: {array[i, j]} "); }
         }
     }
 }
